@@ -59,6 +59,10 @@ header .container {
   padding: 0 100px;
 }
 
+header .container img {
+  display: none;
+}
+
 header .container h1 {
   color: var(--green);
 }
@@ -82,14 +86,72 @@ nav img {
   height: 45px;
 }
 
+nav ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
 nav ul a {
   font-size: 24px;
   color: var(--green);
   text-decoration: none;
-  margin: 0 35px;
 }
 
-section {
-  height: 1500px;
-  background-color: purple;
+nav ul a svg {
+  display: none;
+}
+
+/*  Media Queries - Responsividade */
+
+/* Small Desktops */
+@media (max-width: 1000px) {
+  header .container {
+    width: 100%;
+  }
+  
+  nav {
+    padding: 0 30px;
+  }
+
+  nav ul a {
+    font-size: 18px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 767px) {
+  header .container img {
+    display: inline;
+    margin-bottom: 70px;
+  }
+
+  nav img {
+    display: none;
+  }
+
+  nav ul a {
+    font-size: 16px;
+  }
+
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+  header .container {
+    padding: 0 40px;
+  }
+
+  nav {
+    padding: 0 15px;
+  }
+
+  nav ul a {
+    font-size: 12px;
+  }
+
+  nav ul a svg {
+    display: block;
+    margin: 0 auto 10px;
+  }
 }
