@@ -48,14 +48,6 @@ button {
   font-size: 18px;
 }
 
-/* .title-blue {
-  color: var(--blue);
-}
-
-.title-green {
-  color: var(--green);
-} */
-
 header {
   height: calc(100vh - 65px);
   display: flex;
@@ -119,16 +111,37 @@ nav ul a svg {
 
 .about-me .img-container {
   width: 50%;
+  text-align: center;
+  position: relative;
+}
+
+.about-me .img-container .line.blue {
+  width: calc(70% + 50px);
+  height: calc(100% + 50px);
+  border: 1px solid var(--blue);
+
+  position: absolute;
+  top: -25px;
+  left: calc(50% - 35% - 25px);
+}
+
+.about-me .img-container .line.green {
+  width: calc(70% + 50px);
+  height: calc(100% + 50px);
+  border: 1px solid var(--green);
+
+  position: absolute;
+  top: -25px;
+  left: calc(50% - 35% - 25px);
+  transform: rotate(-3.3deg);
 }
 
 .about-me .img-container img {
-  display: block;
-  margin: 0 auto;
   width: 70%;
-
+  height: 100%;
 }
 
-/*  Media Queries - Responsividade */
+/*  Media Queries - Responsiveness */
 
 /* Small Desktops */
 @media (max-width: 1000px) {
@@ -162,7 +175,7 @@ nav ul a svg {
 
 }
 
-/* Celulares */
+/* Smartphones */
 @media (max-width: 480px) {
   header .container {
     padding: 0 40px;
