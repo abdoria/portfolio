@@ -5,6 +5,7 @@
   --green: #15cdcb;
   --bg: #212226;
   --lightgrey: #e0dede;
+  --medium-grey: #2f3034;
 
   --menu-height: 75px;
 }
@@ -45,6 +46,25 @@ button {
   color: #fff;
   font-weight: bold;
   font-size: 18px;
+}
+
+.secondary-button {
+  background-color: var(--medium-grey);
+  border: 1px solid var(--blue);
+  color: var(--green);
+  font-weight: bold;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+}
+
+.secondary-button img {
+  margin-right: 15px;
+}
+
+.secondary-button:hover {
+  cursor: pointer;
 }
 
 header {
@@ -258,6 +278,33 @@ nav ul a svg {
   margin-left: 10px;
 }
 
+.curriculum {
+  padding: 0 100px;
+  text-align: center;
+}
+
+.curriculum .container {
+  display: flex;
+  margin: 50px auto;
+  max-width: 1200px;
+}
+
+.curriculum .container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+}
+
+.curriculum .container .content .curriculum-info {
+  display: grid;
+  grid-template-columns: 150px auto;
+  gap: 1rem;
+  margin-bottom: 50px;
+}
+
 /*  Media Queries - Responsiveness */
 
 /* Small Desktops */
@@ -311,6 +358,17 @@ nav ul a svg {
 
   .portfolio {
     height: 100%;
+  }
+
+  .curriculum .container {
+    flex-wrap: wrap;
+  }
+
+  .curriculum .container .curriculum-img {
+    display: block;
+    margin: 0 auto 50px;
+    width: 100%;
+    max-width: 520px;
   }
 }
 
@@ -376,5 +434,13 @@ nav ul a svg {
 
   .portfolio .portfolio-container {
     margin-top: 70px;
+  }
+
+  .curriculum {
+    padding: 0 20px;
+  }
+
+  .curriculum .container .content .curriculum-info {
+    padding: 0 15px;
   }
 }
